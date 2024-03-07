@@ -22,38 +22,54 @@
 )
 
 #title-slide(
-  title: "Slide Title",
-  subtitle: "Subtitle",
-  author: "Author Name",
-  date: datetime.today().display("[day] [month repr:long] [year]"),
+  title: "A Kotlin Multiplatform implementation of Aggregate Computing based on XC",
+  // subtitle: "Thesis ",
+  author: "Angela Cortecchia",
+  // date: datetime.today().display("[day] [month repr:long] [year]"),
 )
 
-#new-section-slide("Slide section 1")
+#new-section-slide("Context")
 
-#slide(title: "Slide")[
-  *Bold* and _italic_ text.
+#slide(title: "Context")[
+  Computing devices increasingly present to form the Internet of Things, increasing the complexity of distributed systems.
+
+  // === Goal
+  From device-centric to aggregate-centric approach can lead to advantages:
+  - _distributed intelligence_
+  - _resource pooling_
+  - _adaptability_
+  - _robustness_
+]
+
+#slide(title: "Aggregate Computing")[
+  = Aggregate Computing
+  The goal is to program and operate in terms of _aggregate_ of devices, coordinating a macroscopic behaviour.
+
+  Aggregate Computing elaborates a layered architecture that aims to simplify the design, creation and maintenance of distributed systems.
   
-  This is a citiation @nicolas_farabegoli_2024_10535841.
+]
+
+
+
+#slide(title: "XC")[
+  *Bold* and _italic_ text.
 
   #alert[
     This is an alert.
   ]
 ]
 
-#slide(title: "Code slide")[
-  ```kotlin
-  fun main() {
-      println("Hello, world!")
+#slide(title: "What is Collektive")[
+  *Bold* and _italic_ text.
 
-      for (i in 0..9) {
-          println(i)
-      }
-      println("Goodbye, world!")
-  }
-  ```
+  #alert[
+    This is an alert.
+  ]
 ]
 
-#slide[
+#new-section-slide("Contributions")
+
+#slide(title: "DSL")[
   = This is a title
 
   #lorem(24)
@@ -63,15 +79,45 @@
   #lorem(34)
 ]
 
-#slide[
+#slide(title: "XC in Collektive")[
+  == Exchange
 
-  == Icon in a title #fa-java()
-
-  #fa-icon("github", fa-set: "Brands") -- Github icon
-
-  #fa-icon("github", fa-set: "Brands", fill: blue) -- Github icon blue fill
+  == Messages
 ]
 
-#slide[
-  #bibliography("bibliography.bib")
+#slide(title: "Alchemist Incarnation Collektive")[
+  = This is a title
+
+  == This is a subtitle
+
+  #lorem(34)
+]
+
+
+#new-section-slide("Validation")
+
+#slide(title: "Collektive Examples")[
+  = This is a title
+
+  == This is a subtitle
+
+  #lorem(34)
+]
+
+#slide(title: "Benchmarks")[
+  = This is a title
+
+  == This is a subtitle
+
+  #lorem(34)
+]
+
+#new-section-slide("Conclusions")
+
+#slide(title: "Future Works")[
+  = This is a title
+
+  == This is a subtitle
+
+  #lorem(34)
 ]
