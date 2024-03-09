@@ -28,22 +28,6 @@
   )
 ]
 
-#let messages = box[
-  #table(inset: 1.5em, stroke: none, columns: (1fr, auto), align: (center, center),
-    [
-      #figure(
-       image("figures/isotropic.svg", width: 45%),
-      )
-    ]
-    , [
-      #figure(
-        image("figures/anisotropic.svg", width: 45%),
-      )
-    ],
-    [Isotropic communication], [Anisotropic communication]
-  )
-]
-
 #title-slide(
   title: [A Kotlin Multiplatform implementation of\ Aggregate Computing based on XC],
   author: authors,
@@ -51,20 +35,31 @@
 
 #new-section-slide("Context")
 
-#slide(title: "Context")[
-  // Computing devices increasingly present to form the Internet of Things, increasing the complexity of distributed systems.
-
-  #figure(
-    image("figures/device-centric.png", width: 30%),
+#let devices = box[
+  #table(inset: 1em, stroke: none, columns: (1fr, 1fr), align: (center, center),
+    [
+      #figure(
+       image("figures/device-centric.png", width: 69%),
+      )
+    ]
+    , [
+      #figure(
+        image("figures/collective-devices.png", width: 69%),
+      )
+    ],
+    [
+      Managing single devices in a distributed system can be challenging due to *scalability*, *limited resources*, *heterogeneity* and *context awareness*.
+    ], [
+        Coordinating a macroscopic behaviour can lead to advantages as *distributed intelligence*, *resource pooling*, *adaptability* and *robustness*.
+      ]
   )
-   Managing the single device in a distributed system can be challenging due to *scalability*, *limited resources*, *heterogeneity* and *context awareness*.
+]
 
-  #figure(
-    image("figures/collective-devices.png", width: 30%),
-  )  
-  Transitioning from device-centric to aggregate-centric approach can lead to advantages as *distributed intelligence*, *resource pooling*, *adaptability* and *robustness*.
+#slide(title: "From device-centric to aggregate-centric approach")[
+  // Computing devices increasingly present to form the Internet of Things, increasing the complexity of distributed systems.
+  #devices
 
-  The goal is to program and operate in terms of *aggregate* of devices, coordinating a macroscopic behaviour.
+  // The goal is to program and operate in terms of *aggregate* of devices, coordinating a macroscopic behaviour.
 
   // interactions between wearable devices such as smart-phones can support different kinds of services, including crowd detection, crowd- aware navigation or dispersal advice.
 ]
@@ -82,12 +77,33 @@
 ]
 
 
-#slide(title: "XC")[
-  An experimental programming language design to develop homogeneous distributed systems, to push the abstraction boundaries further than actual existing approaches.
+#let messages = box[
+  #table(inset: 1.5em, stroke: none, columns: (1fr, 1fr), align: (center, center),
+    [
+      #figure(
+       image("figures/isotropic.svg", width: 69%),
+      )
+    ]
+    , [
+      #figure(
+        image("figures/anisotropic.svg", width: 69%),
+      )
+    ],
+    [Isotropic communication], [Anisotropic communication]
+  )
+]
 
-  Based on a communication primitive that allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
+
+#slide(title: "XC")[
+
+
+  // Based on a communication primitive that allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
   
-  ``` exhcange(e_i, (n) -> return e_r send e_s) ```
+  #messages
+
+  // An experimental programming language design to develop homogeneous distributed systems, to push the abstraction boundaries further than actual existing approaches.
+
+  // ``` exhcange(e_i, (n) -> return e_r send e_s) ```
 ]
 
 #slide(title: "What is Collektive?")[
@@ -104,18 +120,26 @@
 
 #new-section-slide("Contributions")
 
-#slide(title: "DSL")[
-```kt
-fun Aggregate<Int>.program(): Int = exchange(0) { field ->
-  field.map { _, value -> value + 1 }
-}.localValue
+#slide(title: "DSL > Exchange")[
+  The *exhcange* construct is the core of the language and used also to define other constructs.
 
-Collektive(deviceId, network) { program() }.cycle()
-```
+  It allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
 ]
 
-#slide(title: "XC in Collektive")[
-  #messages
+
+
+#slide(title: "DSL > Constructs")[
+> *neighboring*: implemented in terms of *exchange* and allows to access the values of the neighbours.
+
+> *share*: implemented in terms of *exchange* and allows to share the same information across the neighbours.
+
+> *repeat*: not implemented in terms of *exchange* but it is a construct that allows to model the state evolution over time.
+]
+
+#slide(title: "DSL > Messages")[
+  The information sent between devices in a network.
+
+  Allows to associate to a recipient a specifc value, eventually different from the one sent to another recipient.
 ]
 
 #slide(title: "Alchemist Incarnation Collektive")[
@@ -124,33 +148,27 @@ Collektive(deviceId, network) { program() }.cycle()
   An _incarnation_ serves as the interpreter enabling the Alchemist Simulator to comprehend and accurately execute a language.
 
   The goal is to ensure that the DSL is still compatible with the simulator and that it can be used to run simulations without any issues.
+
+  #figure(
+    image("figures/gradient.png"),
+  )
 ]
 
 
 #new-section-slide("Validation")
 
-#slide(title: "Collektive Examples")[
-  = This is a title
-
-  == This is a subtitle
-
-  #lorem(34)
-]
-
 #slide(title: "Benchmarks")[
-  = This is a title
-
-  == This is a subtitle
-
-  #lorem(34)
+  // TODO 
 ]
+
+
+#new-section-slide("Live demo")
+//show different channel
 
 #new-section-slide("Conclusions")
 
 #slide(title: "Future Works")[
-  = This is a title
-
-  == This is a subtitle
-
-  #lorem(34)
+  // TODO
 ]
+
+#new-section-slide("Thank you!")
