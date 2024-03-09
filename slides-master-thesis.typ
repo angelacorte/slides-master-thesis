@@ -120,7 +120,7 @@
 
 #new-section-slide("Contributions")
 
-#slide(title: "DSL > Exchange")[
+#slide(title: "[DSL] - Exchange")[
   The *exhcange* construct is the core of the language and used also to define other constructs.
 
   It allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
@@ -128,7 +128,7 @@
 
 
 
-#slide(title: "DSL > Constructs")[
+#slide(title: "[DSL] - Constructs")[
 > *neighboring*: implemented in terms of *exchange* and allows to access the values of the neighbours.
 
 > *share*: implemented in terms of *exchange* and allows to share the same information across the neighbours.
@@ -136,7 +136,7 @@
 > *repeat*: not implemented in terms of *exchange* but it is a construct that allows to model the state evolution over time.
 ]
 
-#slide(title: "DSL > Messages")[
+#slide(title: "[DSL] - Messages")[
   The information sent between devices in a network.
 
   Allows to associate to a recipient a specifc value, eventually different from the one sent to another recipient.
