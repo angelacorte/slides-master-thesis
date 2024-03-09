@@ -44,7 +44,7 @@
     ]
     , [
       #figure(
-        image("figures/collective-devices.png", width: 69%),
+        image("figures/aggregate-centric.png", width: 69%),
       )
     ],
     [
@@ -66,14 +66,7 @@
 
 #slide(title: "Aggregate Computing")[
   // elaborates a layered architecture that aims to simplify the design, creation and maintenance of distributed systems.
-  With Aggregate Computing the fundamental unit of computation shifts from an individual device to a collaborative ensemble of devices.
-
-  The core idea of functionality composing collective behaviours to achieve effective and resilient complex behaviours in dynamic net- works.
-  
-  Three key traits:
-  - global stance with global-to-local mapping
-  - behaviour compositionality 
-  - abstraction
+  With *Aggregate Computing* the fundamental unit of computation shifts from an individual device to a _collaborative ensemble of devices_: composing collective behaviours to *achieve effective and resilient complex behaviours in dynamic networks*.
 ]
 
 
@@ -110,12 +103,12 @@
   *Collektive* is a minimal DSL for aggregate programming, to simplify the development of distributed systems, providing high-level abstractions for collective coordination and communication.
 ]
 
-#slide(title: "Goal")[
-  > Extend the existing DSL *Collektive* by applying the concepts of *XC* whithin the Kotlin Multiplatform environment
+#slide(title: "Goals")[
+  - Extend the existing DSL *Collektive* by applying the concepts of *XC* whithin the Kotlin Multiplatform environment.
 
-  > Provide a more flexible and powerful tool for the development of distributed systems
+  - Provide a more flexible and powerful tool for the development of distributed systems.
   
-  > Aiming to be competitive against the existing state of the art _ScaFi_ and _Protelis_.
+  - Aiming to be competitive against the existing state of the art _ScaFi_ and _Protelis_.
 ]
 
 #new-section-slide("Contributions")
@@ -123,31 +116,33 @@
 #slide(title: "[DSL] - Exchange")[
   The *exhcange* construct is the core of the language and used also to define other constructs.
 
-  It allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
+  It allows to exchange messages between devices, with the crucial aspect that can _send a different value to each neighbour_, allowing *custom interaction* between them.
 ]
 
 
 
 #slide(title: "[DSL] - Constructs")[
-> *neighboring*: implemented in terms of *exchange* and allows to access the values of the neighbours.
+- *neighboring*: implemented in terms of *exchange*, allows to access the values of the neighbours.
 
-> *share*: implemented in terms of *exchange* and allows to share the same information across the neighbours.
+- *share*: implemented in terms of *exchange*, allows to share the same information across the neighbours.
 
-> *repeat*: not implemented in terms of *exchange* but it is a construct that allows to model the state evolution over time.
+- *repeat*: *not* implemented in terms of *exchange*, allows to model the state evolution over time.
 ]
 
 #slide(title: "[DSL] - Messages")[
-  The information sent between devices in a network.
+  The information sent between devices in a network:
 
-  Allows to associate to a recipient a specifc value, eventually different from the one sent to another recipient.
+  - Allows to associate to a recipient a specifc value, eventually different from the one sent to another recipient.
+
+  - Or to send the same value to all the neighbours.
 ]
 
 #slide(title: "Alchemist Incarnation Collektive")[
-  *Alchemist* is a meta-simulator for pervasive computing and distributed systems.
+  // *Alchemist* is a meta-simulator for pervasive computing and distributed systems.
 
-  An _incarnation_ serves as the interpreter enabling the Alchemist Simulator to comprehend and accurately execute a language.
+  // An _incarnation_ serves as the interpreter enabling the Alchemist Simulator to comprehend and accurately execute a language.
 
-  The goal is to ensure that the DSL is still compatible with the simulator and that it can be used to run simulations without any issues.
+  // The goal is to ensure that the DSL is still compatible with the simulator and that it can be used to run simulations without any issues.
 
   #figure(
     image("figures/gradient.png"),
@@ -158,7 +153,9 @@
 #new-section-slide("Validation")
 
 #slide(title: "Benchmarks")[
-  // TODO 
+  #figure(
+    image("figures/channel.png", width: 70%),
+  )
 ]
 
 
@@ -168,7 +165,9 @@
 #new-section-slide("Conclusions")
 
 #slide(title: "Future Works")[
-  // TODO
+  - Creation of a standard library to provide modules and functionalities;
+  - Creation of hybrid demonstrations;
+  - Further optimisations to the language.
 ]
 
-#new-section-slide("Thank you!")
+#new-section-slide("Thank you for your attention!")
