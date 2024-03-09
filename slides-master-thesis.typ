@@ -132,9 +132,9 @@
 #slide(title: "[DSL] - Messages")[
   The information sent between devices in a network:
 
-  - Allows to associate to a recipient a specifc value, eventually different from the one sent to another recipient.
+  - Allows for associating a value with a specific recipient, sending different values to different recipients.
 
-  - Or to send the same value to all the neighbours.
+  - Or send the same value to all the neighbours.
 ]
 
 #slide(title: "Alchemist Incarnation Collektive")[
