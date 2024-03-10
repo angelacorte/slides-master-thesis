@@ -10,7 +10,7 @@
 
 #set text(font: "Inter", weight: "light", size: 20pt)
 #show math.equation: set text(font: "Fira Math")
-#set strong(delta: 200)
+#set strong(delta: 190)
 #set par(justify: true)
 
 #set raw(tab-size: 4)
@@ -62,13 +62,12 @@
   // The goal is to program and operate in terms of *aggregate* of devices, coordinating a macroscopic behaviour.
 
   // interactions between wearable devices such as smart-phones can support different kinds of services, including crowd detection, crowd- aware navigation or dispersal advice.
+
+  //With *Aggregate Computing* the fundamental unit of computation shifts from an individual device to a _collaborative ensemble of devices_: composing collective behaviours to *achieve effective and resilient complex behaviours in dynamic networks*.
 ]
 
-#slide(title: "Aggregate Computing")[
-  // elaborates a layered architecture that aims to simplify the design, creation and maintenance of distributed systems.
-  With *Aggregate Computing* the fundamental unit of computation shifts from an individual device to a _collaborative ensemble of devices_: composing collective behaviours to *achieve effective and resilient complex behaviours in dynamic networks*.
-]
-
+// #slide(title: "Aggregate Computing")[
+// ]
 
 #let messages = box[
   #table(inset: 1.5em, stroke: none, columns: (1fr, 1fr), align: (center, center),
@@ -88,15 +87,9 @@
 
 
 #slide(title: "XC")[
-
-
   // Based on a communication primitive that allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
-  
   #messages
-
   // An experimental programming language design to develop homogeneous distributed systems, to push the abstraction boundaries further than actual existing approaches.
-
-  // ``` exhcange(e_i, (n) -> return e_r send e_s) ```
 ]
 
 #slide(title: "What is Collektive?")[
@@ -104,58 +97,81 @@
 ]
 
 #slide(title: "Goals")[
-  - Extend the existing DSL *Collektive* by applying the concepts of *XC* whithin the Kotlin Multiplatform environment.
-
-  - Provide a more flexible and powerful tool for the development of distributed systems.
+  - Re-thinking the architecture of *Collektive* making it *XC*-based.
   
-  - Aiming to be competitive against the existing state of the art _ScaFi_ and _Protelis_.
+  - Verify that performance are at least comparable with the state of the art _ScaFi_ and _Protelis_.
 ]
 
 #new-section-slide("Contributions")
 
-#slide(title: "[DSL] - Exchange")[
-  The *exhcange* construct is the core of the language and used also to define other constructs.
+// #slide(title: "[DSL] - Exchange")[
+//   // The *exchange* construct is the core of the language and used also to define other constructs.
 
-  It allows to exchange messages between devices, with the crucial aspect that can _send a different value to each neighbour_, allowing *custom interaction* between them.
+//   // It allows to exchange messages between devices, with the crucial aspect that can _send a different value to each neighbour_, allowing *custom interaction* between them.
+// ]
+
+#slide(title: "Operators rivisited and implemented based on XC")[
+- *repeat*: allows to model the state evolution over time.
+  
+- *neighboring*: allows to access the values of the neighbours.
+
+- *share*: allows to share the same information across the neighbours.
 ]
 
-
-
-#slide(title: "[DSL] - Constructs")[
-- *neighboring*: implemented in terms of *exchange*, allows to access the values of the neighbours.
-
-- *share*: implemented in terms of *exchange*, allows to share the same information across the neighbours.
-
-- *repeat*: *not* implemented in terms of *exchange*, allows to model the state evolution over time.
-]
-
-#slide(title: "[DSL] - Messages")[
+#slide(title: "Communication between devices")[
   The information sent between devices in a network:
 
-  - Allows for associating a value with a specific recipient, sending different values to different recipients.
+  - Allow to associate a value with a specific recipient, sending different values to different recipients.
 
   - Or send the same value to all the neighbours.
 ]
 
 #slide(title: "Alchemist Incarnation Collektive")[
+// todo storia sull'importanza della simulazione sia in sviluppo che in verifica
+  #lorem(10)
   // *Alchemist* is a meta-simulator for pervasive computing and distributed systems.
 
   // An _incarnation_ serves as the interpreter enabling the Alchemist Simulator to comprehend and accurately execute a language.
 
   // The goal is to ensure that the DSL is still compatible with the simulator and that it can be used to run simulations without any issues.
 
-  #figure(
-    image("figures/gradient.png"),
-  )
+  // #figure(
+  //   image("figures/gradient.png"),
+  // )
 ]
 
+#let benchmarks = box[
+  #table(inset: 0.1em, stroke: none, columns: (2fr, 2fr, 2fr, 2fr, 1fr), align: (center, center),
+    [
+      #figure(
+       image("figures/neighborCounter.png", width: 190%),
+      )
+    ],[
+      #figure(
+        image("figures/branching.png", width: 190%),
+      )
+    ],[
+      #figure(
+        image("figures/gradient_g.png", width: 190%),
+      )
+    ],[
+      #figure(
+        image("figures/channel.png", width: 190%),
+      )
+    ], [
+      #figure(
+        image("figures/legend.png", width: 70%),
+      )
+    ]
+  )
+]
 
 #new-section-slide("Validation")
 
 #slide(title: "Benchmarks")[
-  #figure(
-    image("figures/channel.png", width: 70%),
-  )
+  // altri 3 grafici
+  #benchmarks
+  
 ]
 
 
@@ -168,6 +184,9 @@
   - Creation of a standard library to provide modules and functionalities;
   - Creation of hybrid demonstrations;
   - Further optimisations to the language.
+  
+  //quali ottimizzazioni?
 ]
 
 #new-section-slide("Thank you for your attention!")
+//toglila o metti un'immagine
