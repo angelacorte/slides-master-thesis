@@ -139,7 +139,7 @@
         image("figures/share.svg", width: 60%),
       )
     ],[
-      *repeat*: allows to model the state evolution over time.
+      *repeat*: allows to model the state evolution of the device over time.
     ],[
       *neighboring*: allows to access the values of the neighbours.
     ], [
