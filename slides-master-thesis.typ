@@ -36,7 +36,7 @@
 #new-section-slide("Context")
 
 #let devices = box[
-  #table(inset: 1em, stroke: none, columns: (1fr, 1fr), align: (center, center),
+  #table(inset: 1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
     [
       #figure(
        image("figures/device-centric.png", width: 69%),
@@ -92,8 +92,22 @@
   // An experimental programming language design to develop homogeneous distributed systems, to push the abstraction boundaries further than actual existing approaches.
 ]
 
+#let collektive = box[
+  #table(inset: 1.5em, stroke: none, columns: (0.4fr, 1fr), align: (left, left),
+    [
+      #figure(
+       image("figures/collektive-logo.svg", width: 70%),
+      )
+    ]
+    , [
+      *Collektive* is a minimal DSL for aggregate programming, to simplify the development of distributed systems, providing high-level abstractions for collective coordination and communication.
+    ]
+  )
+]
+
+
 #slide(title: "What is Collektive?")[
-  *Collektive* is a minimal DSL for aggregate programming, to simplify the development of distributed systems, providing high-level abstractions for collective coordination and communication.
+  #collektive
 ]
 
 #slide(title: "Goals")[
@@ -110,12 +124,33 @@
 //   // It allows to exchange messages between devices, with the crucial aspect that can _send a different value to each neighbour_, allowing *custom interaction* between them.
 // ]
 
-#slide(title: "Operators rivisited and implemented based on XC")[
-- *repeat*: allows to model the state evolution over time.
-  
-- *neighboring*: allows to access the values of the neighbours.
+#let operators = box[
+  #table(inset: 1em, stroke: none, columns: (1fr, 1fr, 1fr), align: (left, left, left),
+    [
+      #figure(
+       image("figures/rep.svg", width: 30%),
+      )
+    ],[
+      #figure(
+        image("figures/nbr.svg", width: 60%),
+      )
+    ],[
+      #figure(
+        image("figures/share.svg", width: 60%),
+      )
+    ],[
+      *repeat*: allows to model the state evolution over time.
+    ],[
+      *neighboring*: allows to access the values of the neighbours.
+    ], [
+      *share*: allows to share the same information across the neighbours.
+    ]
+  )
+]
 
-- *share*: allows to share the same information across the neighbours.
+
+#slide(title: "Operators rivisited and implemented based on XC")[
+  #operators
 ]
 
 #slide(title: "Communication between devices")[
