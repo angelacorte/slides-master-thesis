@@ -154,11 +154,10 @@
 ]
 
 #slide(title: "Communication between devices")[
-  The information sent between devices in a network:
+  To differentiate between communication types, messages have been designed to:
+  - assign different values to each neighbour;
 
-  - Allow to associate a value with a specific recipient, sending different values to different recipients.
-
-  - Or send the same value to all the neighbours.
+  - send the same value to all the neighbours.
 ]
 
 #let incarnation = box[
@@ -169,7 +168,7 @@
       )
     ]
     , [
-      Simulating the behaviour of a distributed system is crucial to verify the correctness of the system and to understand the behaviour of the system in different scenarios.
+      Simulating the behaviour of a distributed system is crucial to verify the correctness of the system and to understand its behaviour in different scenarios.
     ]
   )
 ]
@@ -229,5 +228,5 @@
   
   - Creation of demos able to run the same aggregate program on different platforms simultaneously;
   
-  - Further optimisations to the language, including the mechanism of the alignment and the performance of the language.
+  - Further optimisations, including the mechanism of the alignment and the performance of the language.
 ]
