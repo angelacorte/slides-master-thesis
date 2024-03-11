@@ -161,18 +161,27 @@
   - Or send the same value to all the neighbours.
 ]
 
+#let incarnation = box[
+  #table(inset: 0.1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
+    [
+      #figure(
+       image("figures/gradient-2.png", width: 75%),
+      )
+    ]
+    , [
+      Simulating the behaviour of a distributed system is crucial to verify the correctness of the system and to understand the behaviour of the system in different scenarios.
+    ]
+  )
+]
+
 #slide(title: "Alchemist Incarnation Collektive")[
 // todo storia sull'importanza della simulazione sia in sviluppo che in verifica
-  #lorem(10)
+  #incarnation
   // *Alchemist* is a meta-simulator for pervasive computing and distributed systems.
 
   // An _incarnation_ serves as the interpreter enabling the Alchemist Simulator to comprehend and accurately execute a language.
 
   // The goal is to ensure that the DSL is still compatible with the simulator and that it can be used to run simulations without any issues.
-
-  // #figure(
-  //   image("figures/gradient.png"),
-  // )
 ]
 
 #let benchmarks = box[
@@ -217,11 +226,8 @@
 
 #slide(title: "Future Works")[
   - Creation of a standard library to provide modules and functionalities;
-  - Creation of hybrid demonstrations;
-  - Further optimisations to the language.
   
-  //quali ottimizzazioni?
+  - Creation of demos able to run the same aggregate program on different platforms simultaneously;
+  
+  - Further optimisations to the language, including the mechanism of the alignment and the performance of the language.
 ]
-
-#new-section-slide("Thank you for your attention!")
-//toglila o metti un'immagine
