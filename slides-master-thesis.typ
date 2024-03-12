@@ -100,7 +100,7 @@
       )
     ]
     , [
-      *Collektive* is a minimal DSL for aggregate programming, to simplify the development of distributed systems, providing high-level abstractions for collective coordination and communication.
+      *Collektive* is a minimal DSL for aggregate programming in _Kotlin Multiplatform_, to simplify the development of distributed systems, providing high-level abstractions for collective coordination and communication.
     ]
   )
 ]
@@ -124,41 +124,62 @@
 //   // It allows to exchange messages between devices, with the crucial aspect that can _send a different value to each neighbour_, allowing *custom interaction* between them.
 // ]
 
-#let operators = box[
-  #table(inset: 1em, stroke: none, columns: (1fr, 1fr, 1fr), align: (left, left, left),
+#let repEx = box[
+  #table(inset: 1em, stroke: none, columns: (1fr, 1fr,), align: (left, left),
     [
       #figure(
        image("figures/rep.svg", width: 30%),
       )
     ],[
+    //   #figure(
+    //     image("figures/exchange.svg", width: 70%),
+    //   )
+    // ],[
       #figure(
-        image("figures/nbr.svg", width: 60%),
-      )
-    ],[
-      #figure(
-        image("figures/share.svg", width: 60%),
+        image("figures/share.svg", width: 50%),
       )
     ],[
       *repeat*: allows to model the state evolution of the device over time.
     ],[
-      *neighboring*: allows to access the values of the neighbours.
-    ], [
-      *share*: allows to share the same information across the neighbours.
+    //   *neighboring*: allows to access the values of the neighbours and send them information.
+    // ], [
+      *share*: is the composition of the _repeat_ and _neighboring_ operators.
+      //therefore models the state evolution of the device over time and the interaction with the neighbours
+    ]
+  )
+]
+
+#let nbrShare = box[
+  #table(inset: 1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
+    [
+      #figure(
+        image("figures/share.svg", width: 45%),
+      )
+    ],[
+      #figure(
+        image("figures/exchange.svg", width: 45%),
+      )
+    ],[
+      *share*: is the composition of the _repeat_ and _neighboring_ operators, capturing the space-time nature of the computation.
+    ],[
+      *exchange*: works like _share_, but has the crucial aspect that can _send different values to each neighbour_, allowing custom interaction between them.
     ]
   )
 ]
 
 
 #slide(title: "Operators rivisited and implemented based on XC")[
-  #operators
+  #repEx
+
+  #nbrShare
 ]
 
-#slide(title: "Communication between devices")[
-  To differentiate between communication types, messages have been designed to:
-  - assign different values to each neighbour;
+// #slide(title: "Communication between devices")[
+//   To differentiate between communication types, messages have been designed to:
+//   - assign different values to each neighbour;
 
-  - send the same value to all the neighbours.
-]
+//   - send the same value to all the neighbours.
+// ]
 
 #let incarnation = box[
   #table(inset: 0.1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
@@ -184,28 +205,31 @@
 ]
 
 #let benchmarks = box[
-  #table(inset: 0.1em, stroke: none, columns: (2fr, 2fr, 2fr, 2fr, 1fr), align: (center, center),
-    [
-      #figure(
-       image("figures/neighborCounter.png", width: 190%),
-      )
-    ],[
-      #figure(
-        image("figures/branching.png", width: 190%),
-      )
-    ],[
-      #figure(
-        image("figures/gradient_g.png", width: 190%),
-      )
-    ],[
-      #figure(
-        image("figures/channel.png", width: 190%),
-      )
-    ], [
-      #figure(
-        image("figures/legend.png", width: 70%),
-      )
-    ]
+  #figure(
+    table(inset: 0.1em, stroke: none, columns: (2fr, 2fr, 2fr, 2fr,   1fr), align: (center, center),
+      [
+        #figure(
+        image("figures/neighborCounter.png", width: 190%),
+        )
+      ],[
+        #figure(
+          image("figures/branching.png", width: 190%),
+        )
+      ],[
+        #figure(
+          image("figures/gradient_g.png", width: 190%),
+        )
+      ],[
+        #figure(
+          image("figures/channel.png", width: 190%),
+        )
+      ], [
+        #figure(
+          image("figures/legend.png", width: 70%),
+        )
+      ]
+    ),
+    caption: [In complex programs, *Collektive* results 6.90 times faster than _Protelis_ and 3.70 times faster than _ScaFi_.]
   )
 ]
 
@@ -214,7 +238,7 @@
 #slide(title: "Benchmarks")[
   // altri 3 grafici
   #benchmarks
-  
+  Performances may be influenced by the incarnation of the language and should be further investigated.
 ]
 
 
@@ -224,9 +248,9 @@
 #new-section-slide("Conclusions")
 
 #slide(title: "Future Works")[
-  - Creation of a standard library to provide modules and functionalities;
+  - Implementation of a standard library to provide modules and functionalities;
+
+  - Creation of demos for individual language targets;
   
-  - Creation of demos able to run the same aggregate program on different platforms simultaneously;
-  
-  - Further optimisations, including the mechanism of the alignment and the performance of the language.
+  - Creation of demos with heterogeneous devices.
 ]
