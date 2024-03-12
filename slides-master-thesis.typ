@@ -5,7 +5,7 @@
 
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
-  // footer: []
+  // footer: [angela.cortecchia\@unibo.it]
 )
 
 #set text(font: "Inter", weight: "light", size: 20pt)
@@ -22,9 +22,9 @@
 )
 
 #let authors = box[
-  #table(inset: 0.5em, stroke: none, columns: (1fr, auto),
+  #table(inset: 0.5em, stroke: none, columns: (1fr, auto),  align: (left, right),
     [_Supervisor:_ Prof. *Danilo Pianini*], [_Candidate:_ *Angela Cortecchia*],
-    [_Co-supervisor:_ Dr. *Nicolas Farabegoli*], []
+    [_Co-supervisor:_ Dr. *Nicolas Farabegoli*], [\u{1F4E9} angela.cortecchia\@unibo.it]
   )
 ]
 
