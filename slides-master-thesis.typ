@@ -136,15 +136,15 @@
     //   )
     // ],[
       #figure(
-        image("figures/share.svg", width: 50%),
+        image("figures/nbr.svg", width: 50%),
       )
     ],[
       *repeat*: allows to model the state evolution of the device over time.
     ],[
-    //   *neighboring*: allows to access the values of the neighbours and send them information.
+      *neighboring*: allows to access the values of the neighbours and send them information.
     // ], [
-      *share*: is the composition of the _repeat_ and _neighboring_ operators.
-      //therefore models the state evolution of the device over time and the interaction with the neighbours
+    //   *share*: is the composition of the _repeat_ and _neighboring_ operators.
+    //   //therefore models the state evolution of the device over time and the interaction with the neighbours
     ]
   )
 ]
