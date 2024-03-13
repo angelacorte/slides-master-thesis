@@ -125,61 +125,47 @@
 // ]
 
 #let repEx = box[
-  #table(inset: 1em, stroke: none, columns: (1fr, 1fr,), align: (left, left),
+  #table(inset: 1em, stroke: none, columns: (1fr, 1fr, 1fr), align: (left, left, left),
     [
       #figure(
-       image("figures/rep.svg", width: 30%),
+       image("figures/rep.svg", width: 40%),
       )
     ],[
-    //   #figure(
-    //     image("figures/exchange.svg", width: 70%),
-    //   )
-    // ],[
       #figure(
-        image("figures/nbr.svg", width: 50%),
+        image("figures/nbr.svg", width: 70%),
+      )
+    ],[
+      #figure(
+        image("figures/share.svg", width: 70%),
       )
     ],[
       *repeat*: allows to model the state evolution of the device over time.
     ],[
       *neighboring*: allows to access the values of the neighbours and send them information.
-    // ], [
-    //   *share*: is the composition of the _repeat_ and _neighboring_ operators.
-    //   //therefore models the state evolution of the device over time and the interaction with the neighbours
+    ], [
+      *share*: is the composition of the _repeat_ and _neighboring_ operators.
     ]
   )
 ]
 
-#let nbrShare = box[
-  #table(inset: 1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
-    [
-      #figure(
-        image("figures/share.svg", width: 45%),
-      )
-    ],[
-      #figure(
-        image("figures/exchange.svg", width: 45%),
-      )
-    ],[
-      *share*: is the composition of the _repeat_ and _neighboring_ operators, capturing the space-time nature of the computation.
-    ],[
-      *exchange*: works like _share_, but has the crucial aspect that can _send different values to each neighbour_, allowing custom interaction between them.
-    ]
+#let exch = box[
+  #table(inset: 1em, stroke: none, columns: (1fr), align: (left),
+  [
+    #figure(
+      image("figures/exchange.svg", width: 28%),
+    )
+  ],[
+    *exchange*: is the foundation of *XC*, has the crucial aspect that can _send different values to each neighbour_, allowing custom interaction between them. It models the space-time evolution of the device.
+  ]
   )
 ]
-
 
 #slide(title: "Operators rivisited and implemented based on XC")[
-  #repEx
+  #exch
 
-  #nbrShare
+  #repEx
 ]
 
-// #slide(title: "Communication between devices")[
-//   To differentiate between communication types, messages have been designed to:
-//   - assign different values to each neighbour;
-
-//   - send the same value to all the neighbours.
-// ]
 
 #let incarnation = box[
   #table(inset: 0.1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
