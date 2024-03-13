@@ -162,7 +162,8 @@
 
 #slide(title: "Operators rivisited and implemented based on XC")[
   #exch
-
+]
+#slide(title: "Operators rivisited and implemented based on XC")[
   #repEx
 ]
 
