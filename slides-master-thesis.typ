@@ -125,25 +125,25 @@
 // ]
 
 #let repEx = box[
-  #table(inset: 1em, stroke: none, columns: (1fr, 1fr, 1fr), align: (left, left, left),
+  #table(inset: 1em, stroke: none, columns: (0.9fr, 1.1fr, 1.3fr), align: (left, left, left),
     [
       #figure(
-       image("figures/rep.svg", width: 40%),
+       image("figures/rep.svg", width: 45%),
       )
     ],[
       #figure(
-        image("figures/nbr.svg", width: 70%),
+        image("figures/nbr.svg", width: 69%),
       )
     ],[
       #figure(
-        image("figures/share.svg", width: 70%),
+        image("figures/share.svg", width: 55%),
       )
     ],[
       *repeat*: allows to model the state evolution of the device over time.
     ],[
       *neighboring*: allows to access the values of the neighbours and send them information.
     ], [
-      *share*: is the composition of the _repeat_ and _neighboring_ operators.
+      *share*: is the composition of the _repeat_ and _neighboring_ operators, modelling the space-time evolution of the device.
     ]
   )
 ]
