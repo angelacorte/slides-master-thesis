@@ -149,10 +149,10 @@
 ]
 
 #let exch = box[
-  #table(inset: 1em, stroke: none, columns: (1fr), align: (left),
+  #table(inset: 0.4em, stroke: none, columns: (1fr), align: (left),
   [
     #figure(
-      image("figures/exchange.svg", width: 28%),
+      image("figures/exchange.svg", width: 25%),
     )
   ],[
     *exchange*: is the foundation of *XC*, has the crucial aspect that can _send different values to each neighbour_, allowing custom interaction between them. It models the space-time evolution of the device.
@@ -225,7 +225,7 @@
 #slide(title: "Benchmarks")[
   // altri 3 grafici
   #benchmarks
-  Performances may be influenced by the incarnation of the language and should be further investigated.
+  Note that performance results may have been influenced by the incarnation of the language and should be further investigated.
 ]
 
 
