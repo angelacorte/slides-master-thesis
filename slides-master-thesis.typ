@@ -143,7 +143,7 @@
     ],[
       *neighboring*: allows to access the values of the neighbours and send them information.
     ], [
-      *share*: is the composition of the _repeat_ and _neighboring_ operators, modelling the space-time evolution of the device.
+      *share*: _repeat_ and _neighboring_ operators composition modelling the device space-time evolution.
     ]
   )
 ]
