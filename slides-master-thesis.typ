@@ -191,26 +191,26 @@
 
 #let benchmarks = box[
   #figure(
-    table(inset: 0.1em, stroke: none, columns: (2fr, 2fr, 2fr, 2fr,   1fr), align: (center, center),
+    table(inset: 0.3em, stroke: none, columns: (2fr, 2fr, 2fr, 2fr, 0.5fr), align: (center, center),
       [
         #figure(
-        image("figures/neighborCounter.png", width: 200%),
+        image("figures/neighborCounter.svg", width: 200%),
         )
       ],[
         #figure(
-          image("figures/branching.png", width: 200%),
+          image("figures/branching.svg", width: 200%),
         )
       ],[
         #figure(
-          image("figures/gradient_g.png", width: 200%),
+          image("figures/gradient_g.svg", width: 200%),
         )
       ],[
         #figure(
-          image("figures/channel.png", width: 200%),
+          image("figures/channel.svg", width: 200%),
         )
       ], [
         #figure(
-          image("figures/legend.png", width: 90%),
+          image("figures/legend.png", width: 200%),
         )
       ]
     ),
