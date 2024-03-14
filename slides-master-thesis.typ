@@ -196,23 +196,23 @@
     table(inset: 0.1em, stroke: none, columns: (2fr, 2fr, 2fr, 2fr,   1fr), align: (center, center),
       [
         #figure(
-        image("figures/neighborCounter.png", width: 190%),
+        image("figures/neighborCounter.png", width: 200%),
         )
       ],[
         #figure(
-          image("figures/branching.png", width: 190%),
+          image("figures/branching.png", width: 200%),
         )
       ],[
         #figure(
-          image("figures/gradient_g.png", width: 190%),
+          image("figures/gradient_g.png", width: 200%),
         )
       ],[
         #figure(
-          image("figures/channel.png", width: 190%),
+          image("figures/channel.png", width: 200%),
         )
       ], [
         #figure(
-          image("figures/legend.png", width: 70%),
+          image("figures/legend.png", width: 90%),
         )
       ]
     ),
