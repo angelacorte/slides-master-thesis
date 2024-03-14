@@ -56,18 +56,22 @@
 ]
 
 #slide(title: "From device-centric to aggregate-centric approach")[
-  // Computing devices increasingly present to form the Internet of Things, increasing the complexity of distributed systems.
   #devices
+]
+//  Aggregate Computing is a paradigm that allows to program the behaviour of a distributed system by defining the interaction between devices, rather than the behaviour of each device.
 
-  // The goal is to program and operate in terms of *aggregate* of devices, coordinating a macroscopic behaviour.
-
-  // interactions between wearable devices such as smart-phones can support different kinds of services, including crowd detection, crowd- aware navigation or dispersal advice.
-
-  //With *Aggregate Computing* the fundamental unit of computation shifts from an individual device to a _collaborative ensemble of devices_: composing collective behaviours to *achieve effective and resilient complex behaviours in dynamic networks*.
+#slide(title: "Aggregate Computing")[
+  #table(inset: 1em, stroke: none, columns: (2fr, 1.1fr), align: (left, left),
+     [
+        *Aggregate Computing* is a paradigm that allows to program the behaviour of a distributed system by defining the interaction *between devices*, rather than the behaviour _of each device_.
+    ], [
+      #figure(
+        image("figures/aggregate.png", width: 120%),
+      )
+    ]
+  )
 ]
 
-// #slide(title: "Aggregate Computing")[
-// ]
 
 #let messages = box[
   #table(inset: 1.5em, stroke: none, columns: (1fr, 1fr), align: (center, center),
@@ -117,12 +121,6 @@
 ]
 
 #new-section-slide("Contributions")
-
-// #slide(title: "[DSL] - Exchange")[
-//   // The *exchange* construct is the core of the language and used also to define other constructs.
-
-//   // It allows to exchange messages between devices, with the crucial aspect that can _send a different value to each neighbour_, allowing *custom interaction* between them.
-// ]
 
 #let repEx = box[
   #table(inset: 1em, stroke: none, columns: (0.9fr, 1.1fr, 1.3fr), align: (left, left, left),
@@ -223,14 +221,12 @@
 #new-section-slide("Validation")
 
 #slide(title: "Benchmarks")[
-  // altri 3 grafici
   #benchmarks
   Note that performance results may have been influenced by the incarnation of the language and should be further investigated.
 ]
 
 
 #new-section-slide("Live demo")
-//show different channel
 
 #new-section-slide("Conclusions")
 
