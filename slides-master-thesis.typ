@@ -63,7 +63,11 @@
 #slide(title: "Aggregate Computing")[
   #table(inset: 1em, stroke: none, columns: (2fr, 1.1fr), align: (left, left),
      [
-        *Aggregate Computing* is a paradigm that allows to program the behaviour of a distributed system by defining the interaction *between devices*, rather than the behaviour _of each device_.
+        - *Aggregate Computing* is a paradigm for the compositional development of self-adaptive IoT services.
+        
+        - It allows to program the behaviour of a distributed system by defining the interaction *between devices*, rather than the behaviour _of each device_.
+
+
     ], [
       #figure(
         image("figures/aggregate.png", width: 120%),
