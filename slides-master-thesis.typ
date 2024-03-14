@@ -39,23 +39,25 @@
   #table(inset: 1em, stroke: none, columns: (1fr, 1fr), align: (left, left),
     [
       #figure(
-       image("figures/device-centric.png", width: 69%),
+       image("figures/device-centric.png", width: 60%),
       )
     ]
     , [
       #figure(
-        image("figures/aggregate-centric.png", width: 69%),
+        image("figures/aggregate-centric.png", width: 60%),
       )
     ],
     [
-      Managing single devices in a distributed system can be challenging due to *scalability*, *limited resources*, *heterogeneity* and *context awareness*.
+      Managing single devices in a distributed system can be challenging due to *scalability* and *heterogeneity*.
     ], [
-        Coordinating a macroscopic behaviour can lead to advantages as *distributed intelligence*, *resource pooling*, *adaptability* and *robustness*.
+        Coordinating a macroscopic behaviour can lead to advantages as *adaptability to dynamic changes* and *robustness*.
       ]
   )
 ]
 
 #slide(title: "From device-centric to aggregate-centric approach")[
+  Computational devices can find usages in various scenarios, like *smart cities*, *swarm robotics*, *crowd management*, and so on,
+  leading to more complex systems.
   #devices
 ]
 //  Aggregate Computing is a paradigm that allows to program the behaviour of a distributed system by defining the interaction between devices, rather than the behaviour of each device.
@@ -96,9 +98,7 @@
 
 #slide(title: "XC")[
   *XC* is an experimental programming language design to develop homogeneous distributed based on the *Aggregate Computing* paradigm.
-  // Based on a communication primitive that allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
   #messages
-  // An experimental programming language design to develop homogeneous distributed systems, to push the abstraction boundaries further than actual existing approaches.
 ]
 
 #let collektive = box[
