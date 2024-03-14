@@ -63,7 +63,7 @@
 //  Aggregate Computing is a paradigm that allows to program the behaviour of a distributed system by defining the interaction between devices, rather than the behaviour of each device.
 
 #slide(title: "Aggregate Computing")[
-  #table(inset: 1em, stroke: none, columns: (2fr, 1.1fr), align: (left, left),
+  #table(inset: 1.2em, stroke: none, columns: (2fr, 1.1fr), align: (left, left),
      [
         - *Aggregate Computing* is a paradigm for the compositional development of self-adaptive IoT services.
         
@@ -179,19 +179,15 @@
       )
     ]
     , [
-      Simulating the behaviour of a distributed system is crucial to verify the correctness of the system and to understand its behaviour in different scenarios.
+      - *Alchemist* is a meta-simulator for distributed systems.
+      - Simulating the behaviour of a distributed system is crucial to verify the correctness of the system and to understand its behaviour in different scenarios.
+      - An _incarnation_ serves as interpreter for the Alchemist Simulator.
     ]
   )
 ]
 
 #slide(title: "Alchemist Incarnation Collektive")[
-// todo storia sull'importanza della simulazione sia in sviluppo che in verifica
-  #incarnation
-  // *Alchemist* is a meta-simulator for pervasive computing and distributed systems.
-
-  // An _incarnation_ serves as the interpreter enabling the Alchemist Simulator to comprehend and accurately execute a language.
-
-  // The goal is to ensure that the DSL is still compatible with the simulator and that it can be used to run simulations without any issues.
+    #incarnation
 ]
 
 #let benchmarks = box[
@@ -236,9 +232,12 @@
 #new-section-slide("Conclusions")
 
 #slide(title: "Future Works")[
-  - Implementation of a standard library to provide modules and functionalities;
+From defining an application context for an experimental technology, to applying and validating it in simulated scenarios, obtaining good performances as results.
 
-  - Creation of demos for individual language targets;
+Some of the *future works* include:
+  - Implementation of a *standard library* to provide modules and functionalities;
+
+  - Creation of _demos_ for *individual targets*;
   
-  - Creation of demos with heterogeneous devices.
+  - Creation of _demos_ with *heterogeneous devices*.
 ]
