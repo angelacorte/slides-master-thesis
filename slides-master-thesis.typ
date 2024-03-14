@@ -95,6 +95,7 @@
 
 
 #slide(title: "XC")[
+  *XC* is an experimental programming language design to develop homogeneous distributed based on the *Aggregate Computing* paradigm.
   // Based on a communication primitive that allows to exchange messages between devices, with the crucial aspect that can send a different value to each neighbour, allowing custom interaction between them.
   #messages
   // An experimental programming language design to develop homogeneous distributed systems, to push the abstraction boundaries further than actual existing approaches.
