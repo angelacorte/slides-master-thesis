@@ -241,3 +241,8 @@ Some of the *future works* include:
   
   - Creation of _demos_ with *heterogeneous devices*.
 ]
+
+#title-slide(
+  title: [A Kotlin Multiplatform implementation of\ Aggregate Computing based on XC],
+  author: authors,
+)
