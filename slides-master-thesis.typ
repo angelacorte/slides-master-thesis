@@ -83,12 +83,12 @@
   #table(inset: 1.5em, stroke: none, columns: (1fr, 1fr), align: (center, center),
     [
       #figure(
-       image("figures/isotropic.svg", width: 69%),
+       image("figures/isotropic.svg", width: 60%),
       )
     ]
     , [
       #figure(
-        image("figures/anisotropic.svg", width: 69%),
+        image("figures/anisotropic.svg", width: 60%),
       )
     ],
     [Isotropic communication], [Anisotropic communication]
