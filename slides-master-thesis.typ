@@ -232,7 +232,7 @@
 #new-section-slide("Conclusions")
 
 #slide(title: "Future Works")[
-From defining an application context for an experimental technology, to applying and validating it in simulated scenarios, obtaining good performances as results.
+From defining the context for the application of an experimental technology, to applying and validating it in simulated scenarios, obtaining good performances as a result.
 
 Some of the *future works* include:
   - Implementation of a *standard library* to provide modules and functionalities;
