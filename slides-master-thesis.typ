@@ -243,9 +243,7 @@
 To be developed in the next year, as the project won a public *GARR* grant:
   - Implementation of a *standard library*;
 
-  - Creation of _demos_ for *individual targets*;
-  
-  - Creation of _demos_ with *heterogeneous devices*.
+  - Creation of _demonstrations_ with *heterogeneous devices* (Android + iOS + native + wearables).
 ]
 
 #title-slide(
