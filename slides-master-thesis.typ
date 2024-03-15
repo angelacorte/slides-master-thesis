@@ -244,5 +244,4 @@ Some of the *future works* include:
 
 #title-slide(
   title: [A Kotlin Multiplatform implementation of\ Aggregate Computing based on XC],
-  author: authors,
 )
