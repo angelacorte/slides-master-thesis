@@ -56,7 +56,7 @@
 ]
 
 #slide(title: "From device-centric to aggregate-centric approach")[
-  Computational devices can find usages in various scenarios, like *smart cities*, *swarm robotics*, *crowd management*, and so on,
+  Computational devices can find usages in various scenarios, like *smart cities*, *crowd management*, and so on,
   leading to more complex systems.
   #devices
 ]
