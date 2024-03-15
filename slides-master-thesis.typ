@@ -241,7 +241,7 @@
 
 #slide(title: "Future Works")[
 To be developed in the next year, as the project won a public *GARR* grant:
-  - Implementation of a *standard library* to provide modules and functionalities;
+  - Implementation of a *standard library*;
 
   - Creation of _demos_ for *individual targets*;
   
