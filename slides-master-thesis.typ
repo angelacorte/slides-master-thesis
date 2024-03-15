@@ -231,10 +231,16 @@
 
 #new-section-slide("Conclusions")
 
-#slide(title: "Future Works")[
-From defining the context for the application of an experimental technology, to applying and validating it in simulated scenarios, obtaining good performances as a result.
+#slide(title: "Recap")[
+  - Re-engineerization of *Collektive* based on *XC*.
 
-Some of the *future works* include:
+  - Integration with a _simulation platform_.
+
+  - Evaluation of the viability of the approach via _benchmarking_.
+]
+
+#slide(title: "Future Works")[
+To be developed in the next year, as the project won a public *GARR* grant:
   - Implementation of a *standard library* to provide modules and functionalities;
 
   - Creation of _demos_ for *individual targets*;
